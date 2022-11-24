@@ -29,6 +29,7 @@ class Other:
 
     # AVAX测试币领水
     def AVAXFaucet(self, bitNum, bitAddress):
+        self.driver.browser.close_page()
         self.driver.browser.navi_to_page('https://faucet.avax.network/')
         time.sleep(5)
         self.driver.element.send_keys('//*[@id="root"]/div/div[1]/div[1]/div[2]/div[2]/div[1]/input', bitAddress)
